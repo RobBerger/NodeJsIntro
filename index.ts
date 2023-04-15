@@ -1,5 +1,8 @@
+import * as fs from 'fs'
+
 function  helloWorld(name: string) {
     return  "Hello " + name;
    }
    
-   console.log(helloWorld("Hawk"));
+const helloName = helloWorld("Hawk");
+fs.writeFileSync('hello.txt', helloName);
